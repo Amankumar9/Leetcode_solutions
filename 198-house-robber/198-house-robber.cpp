@@ -15,6 +15,6 @@ public:
             f=s;
             s=c;
         }
-        return max(s,f);
+        return s;
     }
 };

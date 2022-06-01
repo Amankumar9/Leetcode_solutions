@@ -15,11 +15,11 @@ public:
                 v[x]=min(v[x],tmp[x]);
             }   
         }
-        for(int l=0;l<26;l++)
+        for(int x=0;x<26;x++)
         {
-             while(v[l]--)
+             while(v[x]--)
              {
-                 res.push_back(string(1,l+'a'));
+                 res.push_back(string(1,x+'a'));
              }
         }
         return res;   

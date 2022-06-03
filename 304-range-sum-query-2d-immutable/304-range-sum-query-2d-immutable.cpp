@@ -1,29 +1,30 @@
 class NumMatrix {
 public:
-        vector<vector<int>>v;
-        NumMatrix(vector<vector<int>>& mat) {
-        for(int i=0;i<mat.size();i++)
-        {
-            for(int j=1;j<mat[0].size();j++)
-            {
-                    mat[i][j]+=mat[i][j-1];
+     vector<vector<int>>sum;
+    NumMatrix(vector<vector<int>>& matrix) {
+        int row=matrix.size();
+        int col=matrix[0].size();
+        
+        for(int i=0;i<row;i++){ 
+            for(int j=1;j<col;j++){
+                matrix[i][j]+=matrix[i][j-1];
             }
         }
-        v=mat;
+        
+        for(int i=1;i<row;i++){
+          for(int j=0;j<col;j++){             
+            matrix[i][j]+=matrix[i-1][j];
+            }
+        }
+        sum=matrix;
     }
     
-    int sumRegion(int r1, int c1, int r2, int c2) {
-        int sum=0;
-        for(int i=r1;i<=r2;i++)
-        {
-           sum+=v[i][c2];
-           if(c1>0)
-               sum-=v[i][c1-1];
-        }
-        return sum;
+    int sumRegion(int row1, int col1, int row2, int col2) {
+        int res=sum[row2][col2];
+        int extra=(col1!=0?sum[row2][col1-1]:0)+(row1!=0?sum[row1-1][col2]:0)-((row1!=0 && col1!=0)?sum[row1-1][col1-1]:0);
+        return res-extra;
     }
 };
-
 
 /**
  * Your NumMatrix object will be instantiated and called as such:

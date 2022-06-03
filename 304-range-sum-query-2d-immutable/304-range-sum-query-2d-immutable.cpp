@@ -2,14 +2,14 @@ class NumMatrix {
 public:
         vector<vector<int>>v;
         NumMatrix(vector<vector<int>>& mat) {
-        v=mat;
         for(int i=0;i<mat.size();i++)
         {
             for(int j=1;j<mat[0].size();j++)
             {
-                    v[i][j]+=v[i][j-1];
+                    mat[i][j]+=mat[i][j-1];
             }
         }
+        v=mat;
     }
     
     int sumRegion(int r1, int c1, int r2, int c2) {

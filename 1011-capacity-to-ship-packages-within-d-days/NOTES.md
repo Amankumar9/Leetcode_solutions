@@ -1,1 +1,2 @@
 https://www.youtube.com/watch?v=pbjsegnnVbw
+https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/discuss/1576116/C%2B%2Bor-Binary-Search-on-Answers-(A-very-imp.-Topic)or-Easy-explanation

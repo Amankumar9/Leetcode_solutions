@@ -7,7 +7,7 @@ public:
         return res;
     }
     
-    void help(int i, vector<int>&nums, vector<int>curr, vector<vector<int>>& res)
+    void help(int i, vector<int>&nums, vector<int>&curr, vector<vector<int>>& res)
     {
         if(i==nums.size())
         {

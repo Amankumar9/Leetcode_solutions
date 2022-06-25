@@ -22,6 +22,6 @@ public:
              if(cnt>1)
                 return false;
         }
-        return cnt<=1;
+        return true;;
     }
 };

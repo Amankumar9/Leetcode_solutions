@@ -19,7 +19,8 @@ public:
                     cnt++;
                  }
              }
-            
+             if(cnt>1)
+                return false;
         }
         return cnt<=1;
     }

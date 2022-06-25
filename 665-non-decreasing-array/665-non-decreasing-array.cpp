@@ -8,12 +8,12 @@ public:
         {
             if(nums[i-1]>nums[i])
             {
-                 if((i<=1) || (i>1 && nums[i-2]<=nums[i]))
+                 if((i<=1) || (nums[i-2]<=nums[i]))
                  {
                     nums[i-1]=nums[i];
                     cnt++;
                  }
-                 else if((i>1 && nums[i-2]>nums[i]))
+                 else if(nums[i-2]>nums[i])
                  {
                     nums[i]=nums[i-1];
                     cnt++;

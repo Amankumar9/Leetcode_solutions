@@ -8,8 +8,6 @@ public:
         {
             if(nums[i-1]>nums[i])
             {
-                 if(cnt==1)
-                   return false;
                  if((i<=1) || (i>1 && nums[i-2]<=nums[i]))
                  {
                     nums[i-1]=nums[i];
@@ -21,7 +19,8 @@ public:
                     cnt++;
                  }
              }
-          }
-          return true;
+            
+        }
+        return cnt<=1;
     }
 };

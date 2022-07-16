@@ -1,7 +1,7 @@
 class Solution {
 public:
     long long minimumRemoval(vector<int>& beans) {
-     long long n=beans.size();
+     int n=beans.size();
      sort(beans.begin(),beans.end());
      long long total=0,prev=0;
      for(int i=0;i<n;i++)

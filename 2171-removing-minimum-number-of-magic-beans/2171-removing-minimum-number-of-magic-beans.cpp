@@ -4,8 +4,7 @@ public:
      int n=beans.size();
      sort(beans.begin(),beans.end());
      vector<long long>pre(n,0);
-     long long cur=0,prev=0;
-     long long res=LONG_MAX;
+     long long cur=0,prev=0,res=LONG_MAX;
      for(int i=0;i<n;i++)
      {
          cur+=beans[i];

@@ -6,8 +6,7 @@ public:
 		long rem=0;
 		for(int i=0;i<nums.size();i++)
 		{
-			rem+=nums[i];
-            rem=(rem+k)%k;
+			rem=(rem+nums[i]+k)%k;
 			if(mp.find(rem)==mp.end())
 				mp[rem]=i;
 			if(i-mp[rem]>1)

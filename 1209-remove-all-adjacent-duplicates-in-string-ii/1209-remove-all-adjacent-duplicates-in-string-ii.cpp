@@ -21,9 +21,10 @@ public:
         while(!st.empty())
         {
             int cnt=st.top().second;
+            char curchar=st.top().first;
             while(cnt--)
             {
-                res+=st.top().first;
+                res+=curchar;
             }
             st.pop();
         }

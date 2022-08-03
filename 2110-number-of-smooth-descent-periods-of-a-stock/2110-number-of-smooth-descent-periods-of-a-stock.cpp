@@ -2,8 +2,6 @@ class Solution {
 public:
     long long getDescentPeriods(vector<int>& prices) {
         int n=prices.size();
-        if(n==1)
-            return 1;
         int prevdig=prices[0],curcnt=0;
         long long res=0;
         // for every digit

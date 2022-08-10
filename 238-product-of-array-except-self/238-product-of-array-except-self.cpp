@@ -2,14 +2,18 @@ class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
         int n=nums.size();
-        vector<int>v(n,1);
+        vector<int>res(n,1);
+        int helpvar=1;
         for(int i=1;i<n;i++)
-          v[i]=v[i-1]*nums[i-1];
-        int x=nums[n-1];
-        for(int i=n-2;i>=0;i--){
-          v[i]=v[i]*x;
-          x=x*nums[i];
+        {
+            helpvar=nums[i-1]*helpvar;
+            res[i]=helpvar;
         }
-        return v;
+        helpvar=1;
+        for(int i=n-2;i>=0;i--){
+            helpvar=helpvar*nums[i+1];
+            res[i]*=helpvar;
+        }
+        return res;
     }
 };

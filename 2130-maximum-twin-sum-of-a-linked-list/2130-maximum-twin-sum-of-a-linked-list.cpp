@@ -39,6 +39,4 @@ public:
         }
         return res;
     }
-    
-    
 };

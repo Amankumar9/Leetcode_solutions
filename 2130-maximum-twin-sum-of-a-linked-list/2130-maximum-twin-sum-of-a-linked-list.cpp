@@ -14,11 +14,13 @@ public:
     {
         int res=0;
         ListNode *fs=head,*sl=head;
+        // find middle of linkedlist
         while(fs)
         {
             sl=sl->next;
             fs=fs->next->next;
         }
+        // reverse second half of linkedlist 
         ListNode *sechead, *prev=NULL, *cur=sl, *nxt=NULL;
         while(cur)
         {
@@ -28,7 +30,7 @@ public:
             cur=nxt;
         }
         sechead=prev;
-        cout<<prev->val;
+        // find maximum sum of two nodes
         while(head && sechead)
         {
             res=max(res,head->val+sechead->val);

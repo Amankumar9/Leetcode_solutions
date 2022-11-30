@@ -9,6 +9,7 @@ class Solution{
 public:
 	// function to return sum of elements
 	// in an array of size n
+	
 	int sum(int arr[], int n) {
 	    // code
 	    int ans=0;
